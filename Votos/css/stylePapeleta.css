@@ -1,0 +1,83 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 30.6rem;
+    background-color: rgb(225, 230, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+}
+
+    .card .card-img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+.profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -8rem;
+    z-index: 999;
+    border: 1rem solid #ebeef8;
+}
+
+.card h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.president {
+    color: #777;
+    font-size: 1.9rem;
+    font-weight: 300;
+}
+
+.team {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: left;
+    color: #333;
+}
+
+.encabezado {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 700px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+}
