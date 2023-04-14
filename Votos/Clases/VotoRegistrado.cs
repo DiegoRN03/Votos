@@ -9,8 +9,7 @@ namespace Votos.Clases
     public class ButtonValue
     {
 
-        //Crear funcion que guarde el valor de cualquier boton que se presiona mediante el id del boton y guarde el ultimo digito en una variable 
-
+     
         public int ButtonValueS(string id)
         {
             //Sacar el ultimo digito y asignarselo a la variable

@@ -16,8 +16,21 @@ namespace Votos
 {
     public partial class Papeleta : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e) { }
+        protected void Page_Load(object sender, EventArgs e) { 
 
+           if (Session["Identificacion"] != null)
+            {
+                string usuarioLogeado =  Session["Identificacion"].ToString();
+                lblBienvenida.Text = usuarioLogeado;
+            }
+            else
+            {
+             
+            }
+      
+        }
+
+        
         protected void empezar(object sender, EventArgs e) { }
 
         protected void CancelarVoto_Click(object sender, EventArgs e)
@@ -59,7 +72,6 @@ namespace Votos
 
         protected void btnV1_Click(object sender, EventArgs e)
         {
-            //Guardar id del boton cuando se de click e imprimelo en la pagina
 
             var Clase = new Clases.ButtonValue();
             int valor = Clase.ButtonValueS(btnV1.ID);

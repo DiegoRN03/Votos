@@ -17,7 +17,17 @@ namespace Votos.Clases
         {
             string Hora = DateTime.Now.ToString("hh:mm:ss");
             string Fecha = DateTime.Now.ToLongDateString();
-          
+            int contador1 = 0;
+            int contador2 = 0;
+            int contador3 = 0;
+            int contador4 = 0;
+            int resultado = voto;
+         
+
+            
+
+
+
             SLDocument libro = new SLDocument(rutaArchivo);
             libro.SelectWorksheet(nombreHoja);
             int fila = 2; // posicion de fecha y hora
@@ -26,21 +36,8 @@ namespace Votos.Clases
                 fila++; // Obtener la última fila con datos
             }
 
-           
-            int resultado = voto;
-
-
-          
-
-            libro.SetCellValue(fila, 2, resultado);
-            libro.SetCellValue(fila, 1, Hora);
-            libro.SetCellValue(fila, 2, Fecha);
-            libro.SetCellValue(fila, 3, resultado);
-            
-            int contador1 = 0;
-            int contador2 = 0;
-            int contador3 = 0;
-            int contador4 = 0;
+                   
+                     
 
             int fila2 = 2;
             while (!String.IsNullOrEmpty(libro.GetCellValueAsString(fila2, 1)))
@@ -69,15 +66,19 @@ namespace Votos.Clases
             libro.SetCellValue(4, 5, "Votos para el partido 3");
             libro.SetCellValue(5, 5, "Votos para el partido 4");
 
-
-
+            libro.SetCellValue(fila, 2, resultado);
+            libro.SetCellValue(fila, 1, Hora);
+            libro.SetCellValue(fila, 2, Fecha);
+            libro.SetCellValue(fila, 3, resultado);
 
 
             libro.SetCellValue(2, 5, contador1);
             libro.SetCellValue(3, 5, contador2);
             libro.SetCellValue(4, 5, contador3);
             libro.SetCellValue(5,5, contador4);
+            
 
+            
 
 
             libro.Save();

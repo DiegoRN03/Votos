@@ -16,6 +16,7 @@
             <div class="encabezado">
                 <h2>Colegio Técnico Profesional de Educación Comercial y Servicios</h2>
                 <h1>ELECCIONES ESTUDIANTILES 2023</h1>
+                <asp:Label ID="lblBienvenida" CssClass="h3" runat="server" />
             </div>
             <!--Empieza la papeleta-->
             <div class="container">
@@ -25,6 +26,8 @@
                     <p>El voto será emitido en 10 segundos
                     </p>
                     <h1 id="delay"></h1>
+
+                    
                    
                     <asp:Button ID ="Button3" runat="server" Text="Cancelar" OnClick="CancelarVoto_Click" />
                 </div>

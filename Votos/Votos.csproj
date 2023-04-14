@@ -147,6 +147,7 @@
   <ItemGroup>
     <Compile Include="Clases\Class1.cs" />
     <Compile Include="Clases\Class2.cs" />
+    <Compile Include="Clases\Class3.cs" />
     <Compile Include="Clases\VotoRegistrado.cs" />
     <Compile Include="Papeleta.aspx.cs">
       <DependentUpon>Papeleta.aspx</DependentUpon>

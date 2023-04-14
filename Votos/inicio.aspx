@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inicio.aspx.cs" Inherits="Votos.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inicio.aspx.cs" Inherits="Votos.inicio" %>
 
 <!DOCTYPE html>
 
@@ -18,22 +18,22 @@
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
-
+                                    
                                     <div class="text-center">
                                         <img src="img/circularSinTextoTEE.png"
                                             style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">Proceso Electoral 2023</h4>
                                     </div>
                                     <form id="form1" runat="server">
+                                       
                                         <p>Por favor digite su número de identificación</p>
 
                                         <div class="form-outline mb-4">
-                                            <input id="txtId" type="text" class="form-control"
-                                                placeholder="111111111"/>
+                                            <asp:TextBox runat="server" ID="TxtLogIn" />
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-primary btn-lg"/>
+                                            <asp:Button OnClick="BtnLog" ID="btnIngresar"  runat="server"  Text="Ingresar" class="btn btn-primary btn-lg"/>
                                         </div>
                                     </form>
                                 </div>
